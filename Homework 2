@@ -1,0 +1,175 @@
+№1
+public static void main(String[] args) {
+    Random random = new Random();
+
+    int num1 = random.nextInt(90) + 10;
+    int num2 = random.nextInt(90) + 10;
+
+    int sum = num1 + num2;
+    long sumL =(long)sum;
+    System.out.println(sumL);
+}
+
+№2
+
+public static void main(String[] args) {
+    Random random = new Random();
+    int num1 = random.nextInt(90) + 10;
+    int num2 = random.nextInt(90) + 10;
+    int product = num1 * num2;
+
+    if (product % 2 == 0) {
+        long productL = (long) product;
+        System.out.println(productL);
+    } else {
+        double productD = (double) product;
+        System.out.println(productD);
+    }
+}
+
+№3
+
+public static void main(String[] args) {
+Random random = new Random();
+        int num1 = random.nextInt(90)+10;
+        Math.pow(num1,2);
+        String castToStr = String.valueOf(num1);
+        System.out.println(num1);
+}
+
+№4
+	public class Main {
+
+   public static void main(String[] args) {
+       Scanner scanner = new Scanner(System.in);
+       System.out.println("Input a number");
+       int number = scanner.nextInt();
+       if (number >= 100) {
+           Random random = new Random();
+           int numCase1 = random.nextInt(number - 50) + 50;
+           System.out.println(numCase1);
+       }
+       if (number <= 100) {
+           Random random = new Random();
+           int numCase2 = random.nextInt(40) + 10;
+           String castToStr = String.valueOf(numCase2);
+           System.out.println(castToStr);
+       }
+   }
+}
+
+
+
+№5 
+public class Main {
+
+   public static void main(String[] args) {
+
+       Random random = new Random();
+       int randomNumber1 = random.nextInt(90)+ 10;
+       System.out.println("First random int : " + randomNumber1);
+       int randomNumber2 = random.nextInt(90)+ 10;
+       System.out.println("Second random int : " + randomNumber2);
+       Scanner scanner = new Scanner(System.in);
+       System.out.print("Input an operator: ");
+       char operator = scanner.next().charAt(0);
+       switch (operator) {
+           case '+':
+               System.out.println(randomNumber1 + randomNumber2);
+               break;
+           case '-':
+               System.out.println(randomNumber1 - randomNumber2);
+               break;
+           case '/':
+               System.out.println(randomNumber1 / randomNumber2);
+               break;
+           case '*':
+               System.out.println(randomNumber1 * randomNumber2);
+               break;
+       }
+   }
+}
+
+№6
+public class Main {
+
+   public static void main(String[] args) {
+
+       System.out.println("Input a week day: ");
+       Scanner scanner = new Scanner(System.in);
+       String dayString ;
+       int weekDay = scanner.nextInt();
+       switch (weekDay) {
+           case 1: dayString = "Monday";
+                   break;
+           case 2: dayString = "Tuesday";
+                   break;
+           case 3: dayString = "Wednesday";
+                   break;
+           case 4: dayString = "Thursday";
+                   break;
+           case 5: dayString = "Friday";
+                   break;
+           case 6: dayString = "Saturday";
+                   break;
+           case 7: dayString = "Sunday";
+                   break;
+           default: dayString = "Error";
+                   break;
+       }
+       System.out.println("Weekday: " + weekDay + " is " + dayString);
+       // erb System.out.println(dayString); error er, inji? ;
+   }
+}
+
+
+
+№7
+public class Main {
+
+   public static void main(String[] args) {
+
+       System.out.println("Input a month name : ");
+       Scanner scanner = new Scanner(System.in);
+       String monthName = scanner.nextLine();
+       switch (monthName) {
+           case "January" : System.out.println(" 31 days"); break;
+           case "February" : System.out.println(" 28/29 days"); break;
+           case "March" : System.out.println(" 31 days"); break;
+           case "April" : System.out.println(" 30 days"); break;
+           case "May" : System.out.println(" 31 days"); break;
+           case "June" : System.out.println(" 30 days"); break;
+           case "July" : System.out.println(" 31 days"); break;
+           case "August" : System.out.println(" 31 days"); break;
+           case "September" : System.out.println(" 30 days"); break;
+           case "October" : System.out.println(" 31 days"); break;
+           case "November" : System.out.println(" 30 days"); break;
+           case "December" : System.out.println(" 31 days"); break;
+           default: System.out.println("Error, input month name");
+       }
+// menak chhaskaca registr@ vonc anem vor string kardaluc tarberutyun chlini, senq ete grem june error chta
+   }
+}
+
+№8
+public class Main {
+
+   public static void main(String[] args) {
+       int radius = 5;
+       System.out.println("_______________________Menu_______________________");
+       System.out.println("-> Enter 1 for calculating area of the circle");
+       System.out.println("-> Enter 2 for calculating perimeter of the circle");
+       System.out.println("-> Enter 3 for exit");
+       Scanner scanner = new Scanner(System.in);
+       int option = scanner.nextInt();
+       switch (option) {
+           case 1: double areaOfCircle = Math.pow(radius,2) * Math.PI;
+                   System.out.println("The area of a circle is " + areaOfCircle);
+                   break;
+           case 2: double perimeterOfCircle = Math.PI * 2 * radius;
+                   System.out.println("The perimeter of a circle is: " + perimeterOfCircle);
+                   break;
+           case 3: break;
+       }
+   }
+}
