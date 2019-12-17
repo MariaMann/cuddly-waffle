@@ -1,0 +1,193 @@
+№1
+public class Main {
+
+   public static void main(String[] args) {
+       int numbers = 20;
+       System.out.println("First 20 natural numbers: ");
+       for (int i = 1; i <= numbers; i++) {
+           System.out.print(i + ", ");
+       }
+   }
+}
+
+№2
+public class Main {
+
+   public static void main(String[] args) {
+       int numbers = 20;
+       System.out.println("First 20 natural numbers: ");
+       for (int i = 1; i <= numbers; i++) {
+           if (i % 3 == 0)
+               continue;
+           System.out.print(i + ", ");
+       }
+   }
+}
+
+№3
+public class Main {
+
+   public static void main(String[] args) {
+       System.out.println("Even numbers in between -20 and 60 are: ");
+       for(int i = -20; i <= 60; i++)
+           if (i % 2 == 0) {
+               System.out.print(i + ", ");
+           }
+   }
+}
+
+№4
+public class Main {
+
+   public static void main(String[] args) {
+       System.out.println("Odd numbers in between -20 and 60 are: ");
+       for(int i = -80; i <= -20; i++)
+           if (i % 2 != 0) {
+               System.out.print(i + ", ");
+           }
+   }
+}
+
+№5
+public class Main {
+
+   public static void main(String[] args) {
+       System.out.println("Sum of first 100 natural numbers: ");
+       int sum = 0;
+       for(int i = 0; i <= 100; i++)
+           sum = sum + i;
+           System.out.print(sum);
+   }
+}
+
+№6
+public class Main {
+
+   public static void main(String[] args) {
+       System.out.println("Sum of odd numbers of first 100 natural numbers: ");
+       int sum = 0;
+       for(int i = 0; i <= 100; i++)
+           if (i % 2 != 0)
+           sum = sum + i;
+           System.out.print(sum);
+   }
+}
+
+№7
+public class Main {
+
+   public static void main(String[] args) {
+       System.out.println("Average of even numbers of first 100 natural numbers: ");
+       int sum = 0;
+       int maxNumber = 100;
+       int average = 0;
+       for(int i = 0; i <= maxNumber; i++)
+               sum += 2 * i;
+               average = sum / maxNumber ;
+           System.out.print(average);
+   }
+}
+
+№8
+public class Main {
+   public static void main(String[] args) {
+       int sum = 0;
+       double average = 0;
+       System.out.println("Input 10 numbers: ");
+       for (int i = 0; i <= 10; i++) {
+           Scanner scanner = new Scanner(System.in);
+           i = scanner.nextInt();
+           sum += i;
+       }
+       average = sum/10;
+       System.out.println("The sum of 10 numbers is: "+ sum + ", and the average is: " + average);
+   }
+}
+
+№9
+public class Main {
+   public static void main(String[] args) {
+       System.out.println("Input an integer to to display cube of the numbers upto yours");
+       Scanner scanner = new Scanner(System.in);
+       int inputInt = scanner.nextInt();
+       for (int i = 1; i <= inputInt; i++) {
+           int powedInt = (int) Math.pow(i,3);
+           System.out.println("Number is: " + i + " and cube of the " + i + " is: " + powedInt);
+       }
+   }
+}
+
+№10
+public class Main {
+   public static void main(String[] args) {
+       System.out.println("Input the number (Table to be calculated): ");
+       Scanner scanner = new Scanner(System.in);
+       int givenInt = scanner.nextInt();
+       for (int i = 0; i <= givenInt; i++){
+           int product = i * givenInt;
+           System.out.println(givenInt + " x " + i + " = " + product);
+       }
+   }
+}
+
+№11 
+// chem haskacel xntir@, kaskacum em vor chishta 
+public class Main {
+   public static void main(String[] args) {
+       System.out.println("Input a digit to check if it prime or not ");
+       Scanner scanner = new Scanner(System.in);
+       int givenInt = scanner.nextInt();
+       for (int i = 2; i <= givenInt / 2; i++) {
+           if (givenInt % i == 0) {
+               System.out.println("Digit is not prime");
+           }else{
+               System.out.println("Digit is prime");
+           }
+       }
+   }
+}
+
+№12 Sxals chem gtnum es xntri mej
+public class Main {
+   public static void main(String[] args) {
+       System.out.println("Input a number to display Fibonacci series: ");
+       Scanner scanner = new Scanner(System.in);
+       int firstFibonacciNumbers = scanner.nextInt();
+       int firstTerm = 0, secondTerm = 1;
+       System.out.println("Here is the Fibonacci series upto " + firstFibonacciNumbers + "terms");
+
+       for (int i = 1; i <= firstFibonacciNumbers; i++) {
+           System.out.print(firstTerm + " " + secondTerm);
+           int sum = firstTerm + secondTerm;
+           firstTerm = secondTerm;
+           secondTerm = sum;
+       }
+   }
+}
+
+№13
+public class Main {
+   public static void main(String[] args) {
+      String stringToReverse = "ROBOTS_WILL_KILL_ALL_HUMANZ";
+      String reversedString = "";
+      for (int i = stringToReverse.length() - 1; i >= 0; i--) { //harc ka
+          reversedString = reversedString +stringToReverse.charAt(i);
+      }
+      System.out.println("Reversed string is: ");
+      System.out.println(reversedString);
+   }
+}
+
+№14
+public class Main {
+   public static void main(String[] args) {
+      Random random = new Random();
+      int[] arrayOFRandomElemnets = new int[10];
+      int sum = 0;
+      for (int i = 0; i < arrayOFRandomElemnets.length; i++) {
+          arrayOFRandomElemnets[i] = random.nextInt();
+          sum += arrayOFRandomElemnets[i];
+      }
+      System.out.println("Array of random elements: " + sum );
+   }
+}
